@@ -16,12 +16,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 
 public class Login extends Fragment {
 
 
     private IMainActivity mInterface;
-    private EditText password;
+    private TextInputEditText password;
     private EditText email;
     private Button signInButton;
 
@@ -47,8 +49,9 @@ public class Login extends Fragment {
         });
 
         email = view.findViewById(R.id.email_edit_tv);
-        password = view.findViewById(R.id.password_edit_tv);
+        password = view.findViewById(R.id.etPassword);
         signInButton = view.findViewById(R.id.sign_in_button);
+
 
 
         allowButtonClick();
