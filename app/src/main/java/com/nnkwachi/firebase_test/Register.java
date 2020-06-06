@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class Register extends Fragment {
 
-    private IMainActivity mInterface;
+
 
     public Register() {
         // Required empty public constructor
@@ -24,19 +24,10 @@ public class Register extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
         Button registerButton = view.findViewById(R.id.register_button);
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mInterface.inflateRegisterFragment();
-            }
-        });
+
         return view;
     }
 
-    @Override
-    public void onAttachFragment(@NonNull Fragment childFragment) {
-        super.onAttachFragment(childFragment);
-        mInterface = (IMainActivity) getActivity();
-    }
+
 }
 

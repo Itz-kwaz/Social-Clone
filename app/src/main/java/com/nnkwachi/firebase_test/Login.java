@@ -1,11 +1,11 @@
 package com.nnkwachi.firebase_test;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -22,29 +22,31 @@ import com.google.android.material.textfield.TextInputEditText;
 public class Login extends Fragment {
 
 
-    private IMainActivity mInterface;
+/*    private IMainActivity mInterface;*/
     private TextInputEditText password;
     private EditText email;
     private Button signInButton;
 
 
-    @Override
+    /*@Override
     public void onAttach(Context context) {
         super.onAttach(context);
         mInterface = (IMainActivity) getActivity();
-    }
+    }*/
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        final Login login = new Login();
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
         TextView register = view.findViewById(R.id.register_tv);
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mInterface.inflateRegisterFragment();
+                Navigation.findNavController(view).navigate(R.id.action_login_to_register);
             }
         });
 

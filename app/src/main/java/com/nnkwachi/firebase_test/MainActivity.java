@@ -5,13 +5,13 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements IMainActivity {
+public class MainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
+       /* init();*/
     }
 
     private  void  init(){
@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
         transaction.commit();
     }
 
-    @Override
+/*    @Override
     public void inflateRegisterFragment() {
         Register RegisterFragment = new Register();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.main_content_frame,RegisterFragment,getString(R.string.register_fragment_tag));
         transaction.addToBackStack(getString(R.string.register_fragment_tag));
         transaction.commit();
-    }
+    }*/
 }
