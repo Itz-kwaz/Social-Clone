@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Twitter Clone</string>
+    <string name="app_name">Social Clone</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -15,4 +15,28 @@
     <string name="name_hint_text">Name</string>
     <string name="login_fragment_tag">Login</string>
     <string name="register_fragment_tag">register_fragment_tag</string>
+    <string name="T_and_C_text">By Signing up, you have accepted the Terms and Conditions of this service.</string>
+    <string name="clone_mode">Clone Mode</string>
+    <string name="write_something">Write Something</string>
+    <string name="resend_verification_email">Resend Verification Email</string>
+    <string name="node_posts">posts</string>
+    <string name="dialog_tag">Change Photo Dialog</string>
+    <string name="open_nav_drawer_tag">Open Navigation Drawer</string>
+    <string name="close_nav_drawer_tag">Close Navigation Drawer</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

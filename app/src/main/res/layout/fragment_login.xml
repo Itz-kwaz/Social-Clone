@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraint_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,16 +9,27 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+    <ProgressBar
+        android:id="@+id/progress"
+        android:visibility="gone"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
     <TextView
         android:id="@+id/facebook"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="@string/facebook"
-        android:textAppearance="?android:textAppearanceLarge"
+        android:textSize="32sp"
         android:textColor="#039BE5"
         android:textStyle="bold"
-        app:fontFamily="@font/comic_neue_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +96,7 @@
         android:layout_marginRight="32dp"
         android:text="@string/error_message"
         android:textAppearance="?android:textAppearanceMedium"
-        android:visibility="visible"
+        android:visibility="gone"
         android:textColor="@android:color/holo_red_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/facebook"
@@ -104,42 +116,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/error_message" />
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            app:layout_constraintStart_toStartOf="parent"
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_button">
+
+        <TextView
+            android:id="@+id/new_to_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sign_in_button"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/resend_email_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:text="@string/new_to_facebook"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@android:color/black"
-                app:fontFamily="@font/comic_neue_bold" />
+            android:text="@string/new_to_facebook"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"
+            app:fontFamily="@font/comic_neue_bold" />
 
-            <TextView
-                android:id="@+id/register_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_toRightOf="@id/resend_email_tv"
-                android:text="@string/register"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="#039BE5"
-                app:fontFamily="@font/comic_neue_bold" />
+        <TextView
+            android:id="@+id/register_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/new_to_facebook"
+            android:text="@string/register"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#039BE5"
+            app:fontFamily="@font/comic_neue_bold" />
 
 
+    </RelativeLayout>
 
-        </RelativeLayout>
-
-
-
-
+    <TextView
+        android:id="@+id/resend_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/resend_verification_email"
+        android:visibility="gone"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#039BE5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

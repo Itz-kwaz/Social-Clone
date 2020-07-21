@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "333321432554",
+    "firebase_url": "https://social-clone-30148.firebaseio.com",
+    "project_id": "social-clone-30148",
+    "storage_bucket": "social-clone-30148.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333321432554:android:0cf7d8ce19dc66f2959693",
+        "android_client_info": {
+          "package_name": "com.nnkwachi.firebase_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333321432554-q7bbt8gn2h4odoq83ei89qoskn1pqffa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3BYt2TlN6WT0aLdflSQWt-6XJbdlO86E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333321432554-q7bbt8gn2h4odoq83ei89qoskn1pqffa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
